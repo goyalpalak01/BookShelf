@@ -15,6 +15,7 @@ class App extends Component{
                 </Route>
                 <Route exact path = '/SignUp' component={SignUp}>
                 </Route>
+
             </Router>
         )
     }

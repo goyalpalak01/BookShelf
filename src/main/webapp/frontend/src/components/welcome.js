@@ -31,7 +31,7 @@ class welcome extends Component {
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/SignIn">About</Link></li>
                         <li><Link to="/SignIn">Sign In</Link></li>
-                        <li><Link to="/SignIn">Sign Up</Link></li>
+                        <li><Link to="/SignUp">Sign Up</Link></li>
                         <li className="createAccountShort"><Link to="/SignUp">Create Account</Link></li>
                     </ul>
                 </nav>
