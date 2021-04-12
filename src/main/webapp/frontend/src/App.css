@@ -1,38 +1,191 @@
-.App {
-  text-align: center;
+body {
+  background-size: cover;
+  height: calc(100vh - 80px);
+  background-color: rgb(10, 38, 59);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Welcome body {
+  background-image: url("background1.png");
+  background-size: cover;
+  height: calc(100vh - 0px);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+nav {
+  height: 80px;
+  width: 100%;
+}
+
+label.logo {
+  color: #E5E5E5 ;
+  font-size: 45px;
+  font-family: Menlo;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+
+nav ul {
+  float: right;
+  margin-right: 20px;
+  font-size: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+  font-family: Menlo;
+
+}
+
+nav ul li a {
+  color: #062238;
+  font-size: 30px;
+  padding: 7px 14px;
+  border-radius: 3px;
+}
+
+.NAV nav ul li a {
+  color: #ffffff;
+}
+
+.NAV nav label {
+  color: #ffffff;
+}
+
+.NAV nav{
+  border-bottom: 3px solid #ffffff;
+}
+
+.NAV a:hover {
+  color: #ee2b2b;
+}
+
+a:hover {
+  background: none;
   color: white;
+  transition: .5s;
 }
 
-.App-link {
-  color: #61dafb;
+.checkBtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#check {
+  display: none;
+}
+
+.Welcome .content {
+  position: absolute;
+  top: 360px;
+  left: 100px;
+  width: 600px;
+  height: 150px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #211e1e;
+  font-size: 20px;
+}
+
+.Welcome h1 {
+  color: #ffffff;
+  padding-bottom: 16px;
+  font-size: 40px;
+}
+
+.createAccount {
+  margin-top: 20px;
+  color: white;
+  color: black;
+  background-color: beige;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 6px 18px;
+  border-radius: 25px;
+}
+
+.createAccountShort {
+  display: none;
+}
+
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
   }
-  to {
-    transform: rotate(360deg);
+
+  nav ul li a {
+    font-size: 16px;
   }
+}
+
+/*@media (max-width: 1050px) {*/
+/*  body {*/
+/*    background: url("background2.png") no-repeat;*/
+/*    background-size: cover;*/
+/*    height: calc(118vh - 80px);*/
+/*  }*/
+/*}*/
+
+@media (max-width: 858px) {
+  .checkBtn {
+    display: block;
+  }
+
+  nav {
+    background: rgba(133, 134, 138, 0.85);
+  }
+
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: rgba(137, 138, 140, 0.55);
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+
+  nav ul li {
+    display: block;
+    line-height: 60px;
+  }
+
+  nav ul li a {
+    font-size: 24px;
+  }
+
+  a:hover {
+    background: none;
+    color: #0082e6;
+  }
+
+  #check:checked ~ ul {
+    left: 0;
+  }
+
+  .content {
+    display: none;
+  }
+
+  .createAccountShort {
+    display: block;
+  }
+
+
 }
